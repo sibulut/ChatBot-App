@@ -123,10 +123,15 @@ export default function Home() {
               className={`message ${msg.role}`}
               style={{
                 textAlign: msg.role === "user" ? "right" : "left",
-                color: msg.role === "user" ? "blue" : "green",
+                color:
+                  msg.content.includes("Sorry but you have reached the max allowed conversation limit")
+                    ? "red" // Special case for the "limit reached" message
+                    : msg.role === "user"
+                    ? "blue"
+                    : "green", // Default colors for user and bot
               }}
             >
-              <strong>{msg.role === "user" ? "You:" : "AI Bot:"}</strong> {msg.content}
+              <strong>{msg.role === "user" ? "You:" : "ChatBot:"}</strong> {msg.content}
             </div>
           ))}
         </div>
