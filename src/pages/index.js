@@ -46,7 +46,7 @@ export default function Home() {
         {
           role: "assistant",
           content:
-            "\n**I am sorry but you have reached the max allowed conversation limit. My coder Sadik has imposed a conversation limit. Please refresh the page and start a new conversation**.",
+            "<p><b>I am sorry but you have reached the max allowed conversation limit. My coder Sadik has imposed a conversation limit. Please refresh the page and start a new conversation</b>.",
         },
       ]);
       return; // Stop the function from continuing after the limit is reached
