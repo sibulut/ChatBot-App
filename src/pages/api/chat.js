@@ -1,3 +1,5 @@
+// pages/api/chat.js
+
 import OpenAI from "openai";
 
 const openai = new OpenAI({

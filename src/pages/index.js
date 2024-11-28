@@ -46,7 +46,8 @@ export default function Home() {
         {
           role: "assistant",
           content:
-            "<p><b>I am sorry but you have reached the max allowed conversation limit. My coder Sadik has imposed a conversation limit. Please refresh the page and start a new conversation</b>.",
+            "Sorry but you have reached the max allowed conversation limit. My coder Sadik has imposed a conversation limit. Please refresh the page and start a new conversation.",
+          isBold: true, // Custom property for styling
         },
       ]);
       return; // Stop the function from continuing after the limit is reached
@@ -90,7 +91,7 @@ export default function Home() {
   };
 
   return (
-    <div style={{ fontFamily: "Arial, sans-serif", padding: "20px", display: "flex", justifyContent: "center" }}>
+    <div style={{ fontFamily: "Verdana, sans-serif", padding: "20px", display: "flex", justifyContent: "center" }}>
       <div
         id="chat-container"
         style={{
@@ -125,7 +126,7 @@ export default function Home() {
                 color: msg.role === "user" ? "blue" : "green",
               }}
             >
-              <strong>{msg.role === "user" ? "You:" : "AI:"}</strong> {msg.content}
+              <strong>{msg.role === "user" ? "You:" : "AI Bot:"}</strong> {msg.content}
             </div>
           ))}
         </div>
